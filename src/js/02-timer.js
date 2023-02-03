@@ -38,6 +38,7 @@ function onTargetButtonStartClick() {
   countDownTimeEvent();
   startTimer();
 }
+
 function countDownTimeEvent() {
   diffData = selectedData - Date.now();
   fillTimer(convertMs(diffData));
@@ -47,7 +48,6 @@ function startTimer() {
   const intervalId = setInterval(() => {
     countDownTimeEvent();
     stoptTimer(intervalId);
-    console.log(diffData);
   }, TIME_DELAY);
 }
 
